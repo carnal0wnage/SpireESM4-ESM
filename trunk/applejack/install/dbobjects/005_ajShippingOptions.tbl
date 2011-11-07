@@ -1,0 +1,8 @@
+
+CREATE TABLE [dbo].[ajShippingOptions](
+	[id] [varchar](35) NOT NULL,
+	[label] [varchar](50) NOT NULL,
+	[cost] [varchar](35) NOT NULL,
+	[created] [datetime] NOT NULL,
+	[modified] [datetime] NULL
+) ON [PRIMARY]
