@@ -1,0 +1,16 @@
+
+CREATE TABLE [dbo].[cartShippingQuotes](
+	[id] [varchar](35) NOT NULL,
+	[cartid] [varchar](35) NOT NULL,
+	[shippingModule] [varchar](35) NOT NULL,
+	[optionLabel] [varchar](100) NULL,
+	[cost] [real] NULL,
+	[data] [nvarchar](max) NULL,
+	[created] [datetime] NOT NULL,
+	[moduleLabel] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_cartShippingQuotes] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+

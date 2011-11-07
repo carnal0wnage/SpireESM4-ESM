@@ -1,0 +1,1 @@
+Upload image for thumbnail and/or main image

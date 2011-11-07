@@ -1,0 +1,9 @@
+
+
+CREATE TABLE [dbo].[productPriceTypes](
+	[id] [varchar](35) NOT NULL,
+	[type] [varchar](50) NOT NULL,
+	[sortkey] [int] NOT NULL
+) ON [PRIMARY]
+
+

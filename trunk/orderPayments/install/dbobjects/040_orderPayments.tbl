@@ -1,0 +1,16 @@
+
+
+CREATE TABLE [dbo].[orderPayments](
+	[id] [varchar](35) NOT NULL,
+	[paymentModule] [varchar](50) NOT NULL,
+	[paymentAmount] [real] NOT NULL,
+	[paymentDetails] [varchar](max) NOT NULL,
+	[orderid] [varchar](35) NOT NULL,
+	[created] [datetime] NOT NULL,
+	[modified] [datetime] NOT NULL,
+ CONSTRAINT [PK_orderPayments] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+

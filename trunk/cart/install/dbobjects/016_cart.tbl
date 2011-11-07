@@ -1,0 +1,17 @@
+
+
+CREATE TABLE [dbo].[cart](
+	[id] [varchar](35) NOT NULL,
+	[deliveryaddressinfo] [nvarchar](max) NULL,
+	[billingaddressinfo] [nvarchar](max) NULL,
+	[modified] [datetime] NOT NULL,
+	[created] [datetime] NOT NULL,
+	[siteid] [varchar](35) NOT NULL,
+	[cartid] [varchar](35) NOT NULL,
+	[shippingmethodinfo] [nvarchar](max) NULL,
+	[paymentinfo] [nvarchar](max) NULL,
+ CONSTRAINT [PK_cart] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
