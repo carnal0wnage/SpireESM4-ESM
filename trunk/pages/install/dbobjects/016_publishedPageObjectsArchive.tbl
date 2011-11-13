@@ -1,13 +1,14 @@
 
 CREATE TABLE [dbo].[publishedPageObjectsArchive](
-	[id] [varchar](35) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-	[name] [varchar](35) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-	[module] [varchar](30) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-	[data] [ntext] COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-	[pageid] [varchar](35) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-	[siteid] [varchar](35) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-	[memberType] [nvarchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-	[publishedPageArchiveId] [varchar](35) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[id] [varchar](35) NOT NULL,
+	[name] [varchar](35) NOT NULL,
+	[module] [varchar](30) NOT NULL,
+	[data] [ntext] NOT NULL,
+	[pageid] [varchar](35) NOT NULL,
+	[siteid] [varchar](35) NOT NULL,
+	[memberType] [nvarchar](50) NOT NULL,
+	[publishedPageArchiveId] [varchar](35) NOT NULL,
+	[title] [varchar](100) NULL,
  CONSTRAINT [PK_publishedPageObjectsArchive] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC

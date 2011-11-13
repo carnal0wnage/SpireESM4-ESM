@@ -140,13 +140,14 @@
 		</cfif>
 		
 		<cfset variables.po.setData(serializeJSON(tmp))>
-        
-        <cfif structkeyexists(variables.widgetdata,"where")>
-        	<cfset l.where = structnew()>
-            <cfset l.where.where = variables.widgetData.where>
-        	<cfset variables.po.setValues(l.where)>
-        </cfif>
 
+        <cfset l.where = structnew()>
+		<cfif structkeyexists(variables.widgetdata,"where")><!--- incorporates previous where data --->
+            <cfset l.where.where = variables.widgetData.where>
+		</cfif>
+		<cfset l.where.where.status = 'staged'><!--- force to only update against staged object --->
+        <cfset variables.po.setValues(l.where)>
+			
 		<cfif variables.po.save()>
 			<cfreturn true>
 		<cfelse>
