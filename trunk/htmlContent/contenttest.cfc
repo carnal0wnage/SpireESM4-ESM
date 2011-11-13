@@ -31,7 +31,9 @@
 		<cfset l.arrUrlParams.pageid = variables.testPage.id>
 		<cfset l.arrUrlParams.siteid = variables.siteid>
 		<cfset l.arrUrlParams.name = l.arrInfo.name>
-		<cfset l.arrUrlParams.info = URLEncodedFormat(serializeJson(l.arrInfo))>		
+		<cfset l.arrUrlParams.type = 'unmanaged'>
+		<cfset l.arrUrlParams.template = 'Interior1Column'>
+		<cfset l.arrUrlParams.info = URLEncodedFormat(serializeJson(l.arrInfo))>
 		<cfloop collection="#l.arrUrlParams#" item="l.idx">
 			<cfset variables.httpObj.addUrlField(l.idx, l.arrUrlParams[l.idx])>
 		</cfloop>
@@ -49,9 +51,9 @@
 		<cfset response = variables.httpObj.load()>
 		<cfset l.rjson = deserializejson(response.getHTML())>
 		<cfset l.editlink = l.rjson.relocate>
-		
+
 		<cfset asserttrue(condition=(response.getStatus() EQ 200),message="Error while submitting new content module")>
-		<cfset asserttrue(condition=refindnocase("/#l.arrInfo.module#/editclientmodule/\?id=[A-Z0-9\-]{35}&parameterlist=editable",l.editlink),message="Error relocating to new content module")>
+		<cfset asserttrue(condition=refindnocase("/#l.arrInfo.module#/editclientmodule/\?id=[A-Z0-9\-]{35}",l.editlink),message="Error relocating to new content module")>
 		<!--- check for lcl scope bug in cf9 --->
 		<cfset assertfalse(condition=response.existsByPattern('unknown-obj'), message="possible error with lcl scope")>
 				
