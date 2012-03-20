@@ -52,6 +52,10 @@
 			<cfreturn structkeyexists(variables.locationpaths, "_")>
 		</cfif>
 		
+		<cfif structkeyexists(variables.locationpaths, "_")>
+			<cfreturn true>
+		</cfif>
+		
 		<cfset pathlen = len(path)>
 		
 		<cfloop collection="#variables.locationpaths#" item="allowedpath">
