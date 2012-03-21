@@ -1,7 +1,7 @@
-<cfcomponent extends="resources.system" displayname="Spirev Media esmPI" hint="Spire Media Enterprise Site Manager">
+<cfcomponent extends="resources.system" displayname="Spirev Media esm 4" hint="Spire Media Enterprise Site Manager">
 		
 	<cfscript>
-		This.name="charteresm";
+		This.name="spireESM4";
 		This.applicationtimeout = CreateTimeSpan(2, 0, 0, 0);
 		This.clientmanagement = false;
 		this.clientstorage = "none";
