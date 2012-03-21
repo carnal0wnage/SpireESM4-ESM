@@ -1,8 +1,8 @@
-dsn=charter
+dsn=spireESM4
 systememailfrom=tina@spiremedia.com
 systememailto=tina@spiremedia.com
 systememailalertflag=1
-siteName=Charter ESM Version Pi
+siteName=spireESM Version 4
 mailsmtp=mail.spiremedia.com
-esmurl=http://charter.esm.amanonaws.com/
+esmurl=http://spireESM4.esm.amanonaws.com/
 debug=true
